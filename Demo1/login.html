@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        
+        <header>
+            <div class="container">
+                <h1>4spurkee_</h1>
+                <nav>
+                    <ul>
+                        <li><a href="about.html">About me</a></li>
+                        <li><a href="index.html">Go back</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="fade-in-content">
+            <main>
+                <h2>Very Real Login Page</h2>
+
+                <div class="form-wrapper">
+                    <label for="b">Choose Browser</label>
+                    <input list="list" name="browser" id="b" />
+
+                    <datalist id="list">
+                        <option value="Chrome"></option>
+                        <option value="Firefox"></option>
+                        <option value="Safari"></option>
+                        <option value="Edge"></option>
+                        <option value="Opera"></option>
+                        <option value="Other"></option>
+                    </datalist>
+
+                    <label for="e">Email:</label>
+                    <input type="email" name="email" id="e" />
+
+                    <label for="p">Password:</label>
+                    <input type="password" name="password" id="p" />
+
+                    <button id="loginBtn">Login</button>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="rm" id="rm" />
+                        <label for="rm">Remember</label>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <p style="visibility: hidden;">Цей текст прихований, але місце залишилось</p>
+
+        <footer>
+            <div class="container">
+                <p>4spurkee_</p>
+                <p>© 2025. All rights NOT reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const emailInput = document.getElementById('e').value.trim();
+            const passwordInput = document.getElementById('p').value.trim();
+
+            // Простий regex для перевірки email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (
+                emailInput === '' ||
+                passwordInput === '' ||
+                !emailRegex.test(emailInput)
+            ) {
+                // Якщо щось не так — перекидаємо на fail.html
+                window.location.href = 'fail.html';
+            } else {
+                // Якщо все ок — перекидаємо на sucess.html
+                window.location.href = 'sucess.html';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
