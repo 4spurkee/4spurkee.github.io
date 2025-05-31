@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo's – 4spurkee_</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .demo-card {
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .demo-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .demo-card p {
+      margin-bottom: 1rem;
+    }
+
+    .demo-card a {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Demo 1 – Slightly modified base style */
+    .demo-1 {
+      background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    }
+
+    .demo-1 a {
+      background-color: #545454;
+      color: #fff;
+    }
+
+    .demo-1 a:hover {
+      background-color: #777;
+    }
+
+    /* Demo 2 – Blue and Yellow */
+    .demo-2 {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a40); 
+      color: #ffcc70;
+    }
+
+    .demo-2 a {
+      background-color: #ffcc70;
+      color: #003366;
+    }
+
+    .demo-2 a:hover {
+      background-color: #ffdb4d;
+    }
+
+    /* Demo 3 – Very dark theme */
+    .demo-3 {
+      background-color: #111;
+      color: #999;
+    }
+
+    .demo-3 a {
+      background-color: #333;
+      color: #f2f2f2;
+    }
+
+    .demo-3 a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>4spurkee_</h1>
+      <nav>
+        <ul>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="login.html">Very Real Login Page</a></li>
+          <li><a href="index.html">Home</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="fade-in-content">
+    <main>
+      <div class="project-title">
+        <h2>Demo Projects</h2>
+      </div>
+      <div class="demo-grid">
+        <div class="demo-card demo-1">
+          <h3>Demo 1</h3>
+          <p>Just like the main page, but slightly styled differently.</p>
+          <a href="#">Try Demo</a>
+        </div>
+        <div class="demo-card demo-2">
+          <h3>Demo 2</h3>
+          <p>A vibrant blue and yellow styled project card.</p>
+          <a href="#">Try Demo</a>
+        </div>
+        <div class="demo-card demo-3">
+          <h3>Demo 3</h3>
+          <p>Extremely dark theme for dark mode lovers.</p>
+          <a href="#">Try Demo</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>4spurkee_</p>
+      <p>© 2025. All rights NOT reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
