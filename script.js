@@ -35,3 +35,21 @@ function scheduleMidnightCheck() {
     }, ms + 100);
 }
 scheduleMidnightCheck();
+const ghost = document.querySelector(".ghost-emoji");
+
+function playGhost() {
+    ghost.style.transition = "2s ease-out";
+    ghost.style.transform = "scale(1) translateY(-160px)";
+    ghost.style.opacity = "1";
+
+    setTimeout(() => {
+        ghost.style.transition = "2s ease-in";
+        ghost.style.transform = "scale(0) translateY(0)";
+        ghost.style.opacity = "0";
+    }, 2200);
+}
+
+setInterval(playGhost, 4500);
+playGhost();
+
+
